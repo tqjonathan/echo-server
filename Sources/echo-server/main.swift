@@ -1,4 +1,4 @@
-/*
+/* Server echo UDP.... */
 import Socket
 
 
