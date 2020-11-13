@@ -16,7 +16,7 @@ do {
             let (clientHostname, clientPort) = Socket.hostnameAndPort(from: address)!
             print("Received lenght \(bytesRead) from \(clientHostname):\(clientPort)")
             let message = String(decoding: buffer, as: UTF8.self)
-            print("Message: \(message)")
+            print("Message: \(message)\n")
         }
         buffer.removeAll()
     } while true
