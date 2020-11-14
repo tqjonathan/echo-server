@@ -3,9 +3,9 @@
 import Socket
 import Foundation
 
-let port = 7667
-
 do {
+    let port = Int(CommandLine.arguments[1])!
+
     let serverSocket = try Socket.create(family: .inet, type: .datagram, proto: .udp)
     try serverSocket.listen(on: port)
     print("listening on \(port)")
