@@ -17,8 +17,6 @@ do {
     repeat {
         // extrae datos y direccion del ciente del datagrama 
         let (bytesRead, clientAddress) = try serverSocket.readDatagram(into: &buffer)
-        // si la direccion de los datos extraida es correcta
-        //print(clientAddress!)
         if let address = clientAddress {
 
             let (clientHostname, clientPort) = Socket.hostnameAndPort(from: address)!
